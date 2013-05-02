@@ -1,6 +1,11 @@
 Motivator::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # setup a middleware that will force user to input password
+  config.middleware.inser_after(::Rack::Lock, "::Rack::Auth::Basic", "Staging") do |u, p|
+    [u, p] == [ENV['SITE_USERNAME'], ENV['SITE_PASSWORD']]
+  end
+
   # Code is not reloaded between requests
   config.cache_classes = true
 

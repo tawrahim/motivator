@@ -2,6 +2,15 @@ require 'spec_helper'
 
 describe StaticPagesController do
 
+  before { @controller = StaticPagesController.new }
+  subject { @controller }
+
+  it { should respond_to :help }
+  it { should respond_to :home }
+  it { should respond_to :contact }
+  it { should respond_to :about }
+
+
   describe "GET 'home'" do
     it "returns http success" do
       get 'home'

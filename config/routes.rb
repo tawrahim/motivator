@@ -1,7 +1,11 @@
 Motivator::Application.routes.draw do
 
   root to: 'static_pages#home'
+  
+  # user resources
+  match '/signup',  to:  'users#new'
 
+  # static pages matchers
   match '/help',    to:  'static_pages#help'
   match '/about',   to:  'static_pages#about'
   match '/contact', to:  'static_pages#contact'

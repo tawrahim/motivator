@@ -1,1 +1,72 @@
-<p>Sign up</p>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "users"  %>
+<% end %>
+
+<div class="login">
+<div class="account-container register stacked">
+    
+    <div class="content clearfix">
+        
+            <h1>Create Your Account</h1>            
+            
+            <div class="login-social">
+                <p>Sign in using social network:</p>
+                
+                <div class="twitter">
+                    <a href="#" class="btn_1">Login with Twitter</a>                
+                </div>
+                
+                <div class="fb">
+                    <a href="#" class="btn_2">Login with Facebook</a>               
+                </div>
+            </div>
+            
+            <div class="login-fields">
+                <p>Create your free account:</p>
+                 <%= render 'shared/error_messages'  %>
+                <%= form_for @user do |f| %>
+                  <div class="field">
+                    <%= f.text_field(:name, placeholder: "name", id: "firstname")  %>
+                  </div>
+
+                  <div class="field">
+                    <%= f.text_field(:phone_number, placeholder: "phone number", id: "firstname")  %>
+                  </div>
+
+                  <div class="field">
+                    <%= f.text_field(:email, placeholder: "email", id: "firstname")  %>
+                  </div>
+
+                  <div class="field">
+                    <%= f.password_field(:password, placeholder: "password", id: "firstname")  %>
+                  </div>
+
+                  <div class="field">
+                    <%= f.password_field(:password_confirmation, placeholder: "re-type password", id: "firstname")  %>
+                  </div>
+
+                  <div class="login-actions">
+                      
+                      <span class="login-checkbox">
+                          <%= check_box(:Field, tabindex: "4", class: "field login-checkbox") %>
+                          <input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
+                          <label class="choice" for="Field">I have read and agree with the Terms of Use.</label>
+                      </span>
+                      
+                      <%= f.submit("Register", class: "", class: "button btn btn-large") %>   
+                      
+                  </div> <!-- .actions -->
+                <% end %>
+            
+            
+    </div> <!-- /content -->
+    
+</div> <!-- /account-container -->
+
+
+<!-- Text Under Box -->
+<div class="login-extra">
+    Already have an account? <a href="./login.html">Login</a>
+</div> <!-- /login-extra -->
+ 
+</div>

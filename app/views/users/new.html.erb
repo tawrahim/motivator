@@ -13,11 +13,11 @@
                 <p>Sign in using social network:</p>
                 
                 <div class="twitter">
-                    <a href="#" class="btn_1">Login with Twitter</a>                
+                    <a href="/auth/twitter" class="btn_1">Login with Twitter</a>                
                 </div>
                 
                 <div class="fb">
-                    <a href="#" class="btn_2">Login with Facebook</a>               
+                    <a href="/auth/facebook" class="btn_2">Login with Facebook</a>               
                 </div>
             </div>
             
@@ -34,7 +34,11 @@
                   </div>
 
                   <div class="field">
-                    <%= f.text_field(:email, placeholder: "email", id: "firstname")  %>
+                    <% if defined?(@more) %>
+                      <%= f.text_field(:email, vaule: "#{@more}", id: "firstname")  %>
+                    <% else %>
+                      <%= f.text_field(:email, placeholder: "email", id: "firstname")  %>
+                    <% end %>
                   </div>
 
                   <div class="field">
@@ -66,7 +70,8 @@
 
 <!-- Text Under Box -->
 <div class="login-extra">
-    Already have an account? <a href="./login.html">Login</a>
+    Already have an account? <a href="<%= signin_path %>">Login</a>
 </div> <!-- /login-extra -->
  
 </div>
+<%= @more if defined?(@more) %>

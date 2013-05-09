@@ -1,0 +1,40 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "users"  %>
+<% end %>
+
+<div class="login">
+<div class="account-container login stacked">
+    
+    <div class="content clearfix">
+        
+            <h1>Sign in</h1>            
+            
+            <div class="login-fields">
+                <%= form_for(:session, url: sessions_path) do |f| %>
+                  <div class="field">
+                    <%= f.text_field(:email, placeholder: "username", class: "login username-field")  %>
+                  </div>
+
+                  <div class="field">
+                    <%= f.password_field(:password, placeholder: "password", class: "login password-field")  %>
+                  </div>
+
+                  <div>
+                      <%= f.submit("Sign in", class: "", class: "button btn btn-large") %>   
+                  </div>
+                <% end %>
+            
+            
+    </div> <!-- /content -->
+    
+</div> <!-- /account-container -->
+
+
+<!-- Text Under Box -->
+<div class="login-extra">
+  New User? <a href="<%= signup_path %>">Create Account</a><br />
+  Forgot Password? <a href="<%= forgot_path %>">Reset</a>
+</div> <!-- /login-extra -->
+ 
+</div>
+</div>

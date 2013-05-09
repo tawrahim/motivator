@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    auth = request.env["omniauth.auth"]
+    @more = auth["info"]["email"] if auth
   end
 
   def show
@@ -14,6 +16,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
+      sign_in @user
       flash[:success] = "welcome to the motivator"
       redirect_to user_path(@user)
       UserMailer.welcome_email(@user).deliver

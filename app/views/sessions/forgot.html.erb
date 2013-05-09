@@ -1,0 +1,28 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "users"  %>
+<% end %>
+
+<div class="login">
+<div class="account-container login stacked">
+    
+    <div class="content clearfix">
+        
+            <h3>Password Reset</h3>            
+            
+            <div class="login-fields">
+                <%= form_for(:session, url: forgot_path) do |f| %>
+                  <div class="field">
+                    <%= f.text_field(:email, placeholder: "email", class: "login username-field")  %>
+                  </div>
+
+                  <div>
+                      <%= f.submit("Reset Password", class: "", class: "button btn btn-large") %>   
+                  </div>
+                <% end %>
+            
+            
+    </div> <!-- /content -->
+    
+</div> <!-- /account-container -->
+</div>
+</div>

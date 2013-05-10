@@ -1,5 +1,6 @@
 Motivator::Application.routes.draw do
   resources :users
+  resources :resets
   resources :sessions, only: [:new, :create, :destroy]
 
   root to: 'static_pages#home'
@@ -7,7 +8,7 @@ Motivator::Application.routes.draw do
   match '/signup',  to:  'users#new'
   match '/signin',  to:  'sessions#new'
   match '/signout',  to:  'sessions#destroy', via: :delete
-  match '/forgot',   to:  'sessions#forgot'
+  match '/forgot',   to:  'resets#new'
   match '/auth/:provider/callback', to: 'users#new'
 
   # static pages matchers

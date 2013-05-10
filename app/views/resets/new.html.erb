@@ -10,7 +10,7 @@
             <h3>Forgot Password</h3>            
             
             <div class="login-fields">
-                <%= form_for(:session, url: forgot_path) do |f| %>
+                <%= form_for(:resets, url: resets_path) do |f| %>
                   <div class="field">
                     <%= f.text_field(:email, placeholder: "email", class: "login username-field")  %>
                   </div>

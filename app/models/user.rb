@@ -12,13 +12,19 @@ class User < ActiveRecord::Base
 
   VALID_EMAIL_REGEX = /\A[\w+@\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
-                                        uniqueness: { case_sensitive: false }
+    uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6 }
   validates :password_confirmation, presence: true
   validates :phone_number, presence: true
 
-  private
-    def create_remember_token
-        self.remember_token = SecureRandom.urlsafe_base64 
-    end
+  def create_remember_token
+    self.remember_token = SecureRandom.urlsafe_base64 
+  end
+
+  def send_password_reset
+    self.password_reset_token = SecureRandom.urlsafe_base64 
+    self.password_reset_sent_at = Time.zone.now
+    self.save!(validate: false)
+    UserMailer.password_reset(self).deliver
+  end
 end

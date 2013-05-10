@@ -18,8 +18,4 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to root_url
   end
-
-  def forgot
-    flash.now[:success] = "An email has been sent to you for password reset"
-  end
 end

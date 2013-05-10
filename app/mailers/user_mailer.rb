@@ -6,4 +6,9 @@ class UserMailer < ActionMailer::Base
     @email = user.email
     mail(to: @email, subject: "Thank you for signing up for Ogyam!")
   end
+
+  def password_reset(user)
+    @user = user
+    mail(to: user.email, subject: "Password Reset") 
+  end
 end

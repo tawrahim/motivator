@@ -33,7 +33,7 @@ Motivator::Application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+   config.force_ssl = true
 
   # See everything in the log (default is :info)
   # config.log_level = :debug
@@ -71,5 +71,5 @@ Motivator::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # Set default url options
-  config.action_mailer.default_url_options = { :host => "http://polar-plains-6972.herokuapp.com/" }
+  config.action_mailer.default_url_options = { :host => "polar-plains-6972.herokuapp.com/" }
 end

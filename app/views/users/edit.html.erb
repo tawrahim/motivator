@@ -1,0 +1,49 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "users"  %>
+<% end %>
+
+<div class="login">
+  <div class="account-container register stacked">
+
+    <div class="content clearfix">
+
+      <div class="login-fields">
+        <p>Edit your account</p>
+        <%= render 'shared/error_messages'  %>
+        <%= form_for @user do |f| %>
+          <div class="field">
+            <%= f.text_field(:name, placeholder: "name", id: "firstname")  %>
+          </div>
+
+          <div class="field">
+            <%= f.text_field(:phone_number, placeholder: "phone number", id: "firstname")  %>
+          </div>
+
+          <div class="field">
+              <%= f.text_field(:email, placeholder: "email", id: "firstname")  %>
+          </div>
+
+          <div class="field">
+            <%= f.password_field(:password, placeholder: "password", id: "firstname")  %>
+          </div>
+
+          <div class="field">
+            <%= f.password_field(:password_confirmation, placeholder: "re-type password", id: "firstname")  %>
+          </div>
+
+          <div class="login-actions">
+
+            <span class="login-checkbox">
+              <%= gravatar_for @user %>
+              <a href="http://gravatar.com/emails" target="_blank">change</a>
+            </span>
+
+            <%= f.submit("Save changes", class: "", class: "button btn btn-large") %>   
+
+          </div> <!-- .actions -->
+        <% end %>
+
+      </div> <!-- /content -->
+
+    </div> <!-- /account-container -->
+  </div>

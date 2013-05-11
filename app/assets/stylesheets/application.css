@@ -12,3 +12,12 @@
  *= require_tree ../../../vendor/assets/stylesheets/.
  *= require custom
  */
+
+.users {
+  list-style-type: none;
+  margin: 0, 10px, 0;
+  li {
+    list-style-type: none;
+    overflow: auto;
+  }
+}

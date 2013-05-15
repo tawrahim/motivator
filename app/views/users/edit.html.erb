@@ -9,7 +9,7 @@
 
       <div class="login-fields">
         <p>Edit your account</p>
-        <%= render 'shared/error_messages'  %>
+        <%= render 'shared/error_messages', object: @user%>
         <%= form_for @user do |f| %>
           <div class="field">
             <%= f.text_field(:name, placeholder: "name", id: "firstname")  %>

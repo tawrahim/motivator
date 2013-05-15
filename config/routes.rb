@@ -2,6 +2,7 @@ Motivator::Application.routes.draw do
   resources :users
   resources :resets
   resources :sessions, only: [:new, :create, :destroy]
+  resources :goals, only: [:create, :destroy]
 
   root to: 'static_pages#home'
   

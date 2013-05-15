@@ -1,0 +1,9 @@
+<li>
+  <span class="content"> <%= goal.content %> </span>
+  <span class=timestamp">
+    Created <%= time_ago_in_words(goal.created_at) %>
+  </span>
+  <% if current_user?(goal.user) %>
+    <%= link_to 'delete', goal, method: :delete %>
+  <% end %>
+</li>

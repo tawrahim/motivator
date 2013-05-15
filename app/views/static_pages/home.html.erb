@@ -1,2 +1,19 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+    <section> 
+      <%= render 'shared/user_info' %>
+    </section>
+    <section> 
+      <%= render 'shared/goal_form' %>
+    </section>
+    </aside>
+    <div class="span8">
+       <h3>Ogyam! feeds</h3>
+       <%= render 'shared/feed'%>
+    </div>
+  </div>
+<% else %>
+  <h1>StaticPages#home</h1>
+  <p>Find me in app/views/static_pages/home.html.erb</p>
+<% end %>

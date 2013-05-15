@@ -1,4 +1,19 @@
 <% provide(:title, @user.name) %>
-<h1>
-  <%= gravatar_for(@user) %>
-</h1>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h3>
+        <%= gravatar_for(@user) %>
+        <%= @user.name %>
+      </h3>
+    </section>
+  </aside>
+</div>
+<div class="span8">
+   <% if @user.goals.any?  %>
+     <h3>Goals (<%= @user.goals.count %>)</h3>
+   <% end %>
+   <ol class="goals">
+     <%= render @user.goals %>
+   </ol>
+</div>

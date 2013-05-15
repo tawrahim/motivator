@@ -5,7 +5,9 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 AddAdminToUsers	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130511125025_add_admin_to_users.rb	/^class AddAdminToUsers < ActiveRecord::Migration$/;"	c
+AddDaysToCompleteGoalToGoals	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130514032102_add_days_to_complete_goal_to_goals.rb	/^class AddDaysToCompleteGoalToGoals < ActiveRecord::Migration$/;"	c
 AddIndexToUsersEmail	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130503030004_add_index_to_users_email.rb	/^class AddIndexToUsersEmail < ActiveRecord::Migration$/;"	c
+AddNumberOfDaysToGoals	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130514031032_add_number_of_days_to_goals.rb	/^class AddNumberOfDaysToGoals < ActiveRecord::Migration$/;"	c
 AddPasswordDigestToUsers	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130503031028_add_password_digest_to_users.rb	/^class AddPasswordDigestToUsers < ActiveRecord::Migration$/;"	c
 AddPasswordResetToUsers	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130509050923_add_password_reset_to_users.rb	/^class AddPasswordResetToUsers < ActiveRecord::Migration$/;"	c
 AddPhoneNumberToUsers	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130505052017_add_phone_number_to_users.rb	/^class AddPhoneNumberToUsers < ActiveRecord::Migration$/;"	c
@@ -13,7 +15,10 @@ AddRememberTokenToUsers	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migra
 Application	/Users/tawheedabdul-raheem/2013/Rails/motivator/config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Motivator
 ApplicationController	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CreateGoals	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130511173151_create_goals.rb	/^class CreateGoals < ActiveRecord::Migration$/;"	c
 CreateUsers	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130503004346_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+Goal	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/models/goal.rb	/^class Goal < ActiveRecord::Base$/;"	c
+GoalsController	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/goals_controller.rb	/^class GoalsController < ApplicationController$/;"	c
 Motivator	/Users/tawheedabdul-raheem/2013/Rails/motivator/config/application.rb	/^module Motivator$/;"	m
 PasswordResetHelper	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/password_reset_helper.rb	/^module PasswordResetHelper$/;"	m
 ResetHelper	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/reset_helper.rb	/^module ResetHelper$/;"	m
@@ -28,6 +33,7 @@ UserMailer	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/mailers/user_mail
 UsersController	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 UsersHelper	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
 about	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/static_pages_controller.rb	/^  def about$/;"	f	class:StaticPagesController
+admin_user	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^    def admin_user$/;"	f	class:UsersController
 change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130503004346_create_users.rb	/^  def change$/;"	f	class:CreateUsers
 change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130503030004_add_index_to_users_email.rb	/^  def change$/;"	f	class:AddIndexToUsersEmail
 change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130503031028_add_password_digest_to_users.rb	/^  def change$/;"	f	class:AddPasswordDigestToUsers
@@ -35,18 +41,26 @@ change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130505052017
 change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130508023841_add_remember_token_to_users.rb	/^  def change$/;"	f	class:AddRememberTokenToUsers
 change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130509050923_add_password_reset_to_users.rb	/^  def change$/;"	f	class:AddPasswordResetToUsers
 change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130511125025_add_admin_to_users.rb	/^  def change$/;"	f	class:AddAdminToUsers
+change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130511173151_create_goals.rb	/^  def change$/;"	f	class:CreateGoals
+change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130514031032_add_number_of_days_to_goals.rb	/^  def change$/;"	f	class:AddNumberOfDaysToGoals
+change	/Users/tawheedabdul-raheem/2013/Rails/motivator/db/migrate/20130514032102_add_days_to_complete_goal_to_goals.rb	/^  def change$/;"	f	class:AddDaysToCompleteGoalToGoals
 contact	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/static_pages_controller.rb	/^  def contact$/;"	f	class:StaticPagesController
 correct_user	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^    def correct_user$/;"	f	class:UsersController
+create	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/goals_controller.rb	/^  def create$/;"	f	class:GoalsController
 create	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/resets_controller.rb	/^  def create$/;"	f	class:ResetsController
 create	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
 create	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
-create_remember_token	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/models/user.rb	/^  def create_remember_token$/;"	f	class:User
+create_remember_token	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/models/user.rb	/^    def create_remember_token$/;"	f	class:User
 current_user	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
 current_user=	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/sessions_helper.rb	/^  def current_user=(user)$/;"	f	class:SessionsHelper
 current_user?	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/sessions_helper.rb	/^  def current_user?(user)$/;"	f	class:SessionsHelper
+custom_validation	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/models/goal.rb	/^  def custom_validation$/;"	f	class:Goal
+destroy	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/goals_controller.rb	/^  def destroy$/;"	f	class:GoalsController
 destroy	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+destroy	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
 edit	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/resets_controller.rb	/^  def edit$/;"	f	class:ResetsController
 edit	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
+feed	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/models/user.rb	/^  def feed$/;"	f	class:User
 full_title	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/application_helper.rb	/^  def full_title(page_title)$/;"	f	class:ApplicationHelper
 gravatar_for	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/users_helper.rb	/^  def gravatar_for(user)$/;"	f	class:UsersHelper
 help	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/static_pages_controller.rb	/^  def help$/;"	f	class:StaticPagesController
@@ -57,12 +71,13 @@ new	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/sessions_con
 new	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
 password_reset	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/mailers/user_mailer.rb	/^  def password_reset(user)$/;"	f	class:UserMailer
 redirect_back_or	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/sessions_helper.rb	/^  def redirect_back_or(default)$/;"	f	class:SessionsHelper
+redirect_to_profile	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^    def redirect_to_profile$/;"	f	class:UsersController
 send_password_reset	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/models/user.rb	/^  def send_password_reset$/;"	f	class:User
 show	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
 sign_in	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/sessions_helper.rb	/^  def sign_in(user)$/;"	f	class:SessionsHelper
 sign_out	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/sessions_helper.rb	/^  def sign_out$/;"	f	class:SessionsHelper
 signed_in?	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/sessions_helper.rb	/^  def signed_in?$/;"	f	class:SessionsHelper
-signed_in_user	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^    def signed_in_user$/;"	f	class:UsersController
+signed_in_user	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/sessions_helper.rb	/^  def signed_in_user$/;"	f	class:SessionsHelper
 store_location	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/helpers/sessions_helper.rb	/^  def store_location$/;"	f	class:SessionsHelper
 update	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/resets_controller.rb	/^  def update$/;"	f	class:ResetsController
 update	/Users/tawheedabdul-raheem/2013/Rails/motivator/app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController

@@ -23,7 +23,7 @@
             
             <div class="login-fields">
                 <p>Create your free account:</p>
-                 <%= render 'shared/error_messages'  %>
+                 <%= render 'shared/error_messages', object: @user%>
                 <%= form_for @user do |f| %>
                   <div class="field">
                     <%= f.text_field(:name, placeholder: "name", id: "firstname")  %>
@@ -53,7 +53,7 @@
                       
                       <span class="login-checkbox">
                           <%= check_box(:Field, tabindex: "4", class: "field login-checkbox") %>
-                          <input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
+                          <input id="Field" name="Terms of Service" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
                           <label class="choice" for="Field">I have read and agree with the Terms of Use.</label>
                       </span>
                       

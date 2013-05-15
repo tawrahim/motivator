@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130511125025) do
+ActiveRecord::Schema.define(:version => 20130514032102) do
+
+  create_table "goals", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.integer  "days_to_complete_goal"
+  end
+
+  add_index "goals", ["user_id", "created_at"], :name => "index_goals_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "name"

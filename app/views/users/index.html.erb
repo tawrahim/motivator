@@ -1,14 +1,8 @@
 <h1>All Users</h1>
 <div class="users">
-  <% User.all.each do |user| %>
+  <% User.all.each do |user_var| %>
     <ul>
-      <li style="list-style: none; ">
-      <%= gravatar_for user %>
-      <%= link_to user.name, user %> 
-      <% if current_user.admin? && !current_user?(user)%>
-        | <%= link_to  "delete", user, method: :delete, confirm: "You sure?" %>
-    <% end %>
-    </li>
-  </ul>
+      <%= render 'user', user: user_var %>
+    </ul>
 <% end %>
   </div>

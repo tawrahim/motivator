@@ -1,4 +1,5 @@
-<li id="">
+<li>
+  <!-- The feed item variable is derived from the collection (defined in feed.html.erb)-->
   <%= link_to gravatar_for(feed_item.user), feed_item.user %>
   <span>
     <%= link_to feed_item.user.name, feed_item.user %>
@@ -11,3 +12,10 @@
     <%= link_to 'delete', feed_item, method: :delete %>
   <% end %>
 </li>
+<h5>Status update</h5>
+<% if feed_item.statuses.any? %>
+  <%= feed_item.statuses %>
+<% else %>
+  <p>Update ya status fool!</p>
+<% end %>
+<%= render partial: 'status/status_form'%>

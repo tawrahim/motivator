@@ -1,8 +1,14 @@
 Motivator::Application.routes.draw do
-  resources :users
   resources :resets
   resources :sessions, only: [:new, :create, :destroy]
   resources :goals, only: [:create, :destroy]
+  resources :statuses, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
   root to: 'static_pages#home'
   

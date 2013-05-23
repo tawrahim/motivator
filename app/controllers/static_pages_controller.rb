@@ -4,6 +4,8 @@ class StaticPagesController < ApplicationController
       @user = current_user
       @goal = current_user.goals.build
       @feed_items = current_user.feed
+      @status_feed = current_user.statuses
+      @status = Status.new
     end
   end
 

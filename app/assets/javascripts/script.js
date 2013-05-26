@@ -12,7 +12,6 @@ $(document).ready(function() {
   
   // activate carousels
   $('#mobile-carousel').carousel();
-  $('#testimonials-carousel').carousel();
   
   // init fitvids plugin
   $(".video").fitVids();

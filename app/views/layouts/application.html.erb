@@ -2,10 +2,11 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= yield :head  %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= yield :head %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>    
 </head>
 <body>
   <%= render 'layouts/header' %>
@@ -14,7 +15,7 @@
   <% end %>
   <%= yield %>
 
-  <%= debug(params) if Rails.env.development?  %>
   <%= render 'layouts/footer' %>
+  <%= debug(params) if Rails.env.development?  %>
 </body>
 </html>

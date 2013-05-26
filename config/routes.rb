@@ -19,9 +19,10 @@ Motivator::Application.routes.draw do
   match '/auth/:provider/callback', to: 'users#new'
 
   # static pages matchers
-  match '/help',    to:  'static_pages#help'
+  match '/terms',    to:  'static_pages#terms'
   match '/about',   to:  'static_pages#about'
   match '/contact', to:  'static_pages#contact'
+  match '/blog',    to:  'static_pages#blog'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

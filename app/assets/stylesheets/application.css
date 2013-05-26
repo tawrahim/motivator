@@ -9,15 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree ../../../vendor/assets/stylesheets/.
- *= require custom
+ *= require_tree .
  */
 
-.users {
-  list-style-type: none;
-  margin: 0, 10px, 0;
-  li {
-    list-style-type: none;
-    overflow: auto;
-  }
-}
